@@ -13,5 +13,11 @@
 
         public Employee GetEmployee(Guid id)
             => Employees.FirstOrDefault(e => e.Id == id);
+
+        public void UpdateEmployee(Employee employee)
+        {
+            var oldEmployee = GetEmployee(employee.Id);
+            oldEmployee.Name = employee.Name;
+        }
     }
 }

@@ -15,9 +15,9 @@
         @foreach (var employee in employees)
         {
             <tr>
-
                 <td><a href="/employee/{@employee.Id}">@employee.Id</a></td>
                 <td><a href="/employee/{@employee.Id}">@employee.Name</a></td>
+                <td><a href="/employee/{@employee.Id}/edit">Edit</a></td>
             </tr>
         }
     </tbody>
