@@ -1,7 +1,7 @@
 ﻿@page "/employee/{id}"
 @inject BlazorApp1.Data.IEmployeeService EmployeeService
 
-<h3>Employee</h3>
+<h3>Employee Details</h3>
 
 <form>
     <div class="form-group">
@@ -14,8 +14,9 @@
     </div>
     <br />
     <div class="form-group">
-        <a href="/employees" class="btn btn-primary">Back</a>
-        <a href="/employee/{@employee.Id}/edit" class="btn btn-secondary">Edit</a>
+        <a href="/employees" class="btn btn-secondary">Back</a>
+        <a href="/employee/{@employee.Id}/edit" class="btn btn-primary">Edit</a>
+        <a href="/employee/{@employee.Id}/delete" class="btn btn-danger">Delete</a>        
     </div>
 </form>
 

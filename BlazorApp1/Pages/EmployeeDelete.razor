@@ -2,7 +2,7 @@
 @inject BlazorApp1.Data.IEmployeeService EmployeeService
 @inject NavigationManager Navigation
 
-<h3>EmployeeDelete</h3>
+<h3>Delete Employee</h3>
 
 <form>
     <div class="form-group">
@@ -10,7 +10,7 @@
     </div>
     <br />
     <div class="form-group">
-        <a href="/employees" class="btn btn-primary">Back</a>
+        <a href="/employees" class="btn btn-secondary">Back</a>
         <button type="button" @onclick="DeleteEmployee" class="btn btn-danger">Delete</button>
     </div>
 </form>
