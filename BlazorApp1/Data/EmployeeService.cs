@@ -19,5 +19,11 @@
             var oldEmployee = GetEmployee(employee.Id);
             oldEmployee.Name = employee.Name;
         }
+
+        public void AddEmployee(Employee employee)
+        {
+            employee.Id = Guid.NewGuid();
+            Employees.Add(employee);
+        }
     }
 }
