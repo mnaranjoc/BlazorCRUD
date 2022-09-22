@@ -9,5 +9,7 @@
         public void UpdateEmployee(Employee employee);
 
         public void AddEmployee(Employee employee);
+
+        public void DeleteEmployee(Guid id);
     }
 }

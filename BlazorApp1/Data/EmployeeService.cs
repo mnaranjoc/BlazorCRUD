@@ -25,5 +25,11 @@
             employee.Id = Guid.NewGuid();
             Employees.Add(employee);
         }
+
+        public void DeleteEmployee(Guid id)
+        {
+            var employee = GetEmployee(id);
+            Employees.Remove(employee);
+        }
     }
 }
