@@ -1,0 +1,31 @@
+﻿@page "/employee/{id}"
+@inject BlazorApp1.Data.IEmployeeService EmployeeService
+
+<h3>Employee</h3>
+
+<form>
+    <div class="form-group">
+        <label>Id</label>
+        <input id="id" class="form-control" name="id" value="@employee.Id" readonly />
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input id="name" class="form-control" name="name" value="@employee.Name" readonly />
+    </div>
+    <br />
+    <div class="form-group">
+        <a href="/employees" class="btn btn-primary">Back</a>
+    </div>
+</form>
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+
+    BlazorApp1.Data.Employee employee;
+
+    protected override void OnInitialized()
+    {
+        employee = EmployeeService.GetEmployee(Guid.Parse(id));
+    }
+}

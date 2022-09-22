@@ -10,5 +10,8 @@
 
         public List<Employee> GetEmployees()
             => Employees;
+
+        public Employee GetEmployee(Guid id)
+            => Employees.FirstOrDefault(e => e.Id == id);
     }
 }

@@ -1,6 +1,5 @@
 ﻿@page "/employees"
-@using BlazorApp1.Data
-@inject IEmployeeService EmployeeService
+@inject BlazorApp1.Data.IEmployeeService EmployeeService
 
 <h3>All Employees</h3>
 
@@ -16,16 +15,16 @@
         @foreach (var employee in employees)
         {
             <tr>
-                <td>@employee.Id</td>
-                <td>@employee.Name</td>
-                <td></td>
+
+                <td><a href="/employee/{@employee.Id}">@employee.Id</a></td>
+                <td><a href="/employee/{@employee.Id}">@employee.Name</a></td>
             </tr>
         }
     </tbody>
 </table>
 
 @code {
-    private List<Employee> employees;
+    private List<BlazorApp1.Data.Employee> employees;
 
     protected override void OnInitialized()
     {
